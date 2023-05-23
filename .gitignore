@@ -37,7 +37,7 @@ next-env.d.ts
 # vscode
 .vscode/
 
-# yarn v3
+# yarn v3 (non zero installs)
 .pnp.*
 .yarn/*
 !.yarn/patches
