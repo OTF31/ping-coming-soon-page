@@ -67,6 +67,12 @@ const App = () => {
             "#040608",
           ],
         },
+        primaryColor: "_blue",
+        headings: {
+          sizes: {
+            h1: { fontSize: "3rem" },
+          },
+        },
         fontFamily: "Libre Franklin",
       }}
       withGlobalStyles
