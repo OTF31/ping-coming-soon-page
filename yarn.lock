@@ -55,6 +55,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ant-design/icons@npm:^5.1.4":
+  version: 5.1.4
+  resolution: "@ant-design/icons@npm:5.1.4"
+  dependencies:
+    "@ant-design/colors": ^7.0.0
+    "@ant-design/icons-svg": ^4.2.1
+    "@babel/runtime": ^7.11.2
+    classnames: ^2.2.6
+    rc-util: ^5.31.1
+  peerDependencies:
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: f74f27b526459e69354adbc9d222a99afcf5fd0074a97575df239fbe5d077de0de903afa612546f24c378c2e163e02e4e31cde575da4e84e597025f12c90984f
+  languageName: node
+  linkType: hard
+
 "@ant-design/react-slick@npm:~1.0.0":
   version: 1.0.1
   resolution: "@ant-design/react-slick@npm:1.0.1"
@@ -622,6 +638,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ping-coming-soon-page@workspace:."
   dependencies:
+    "@ant-design/icons": ^5.1.4
     "@types/node": 20.2.3
     "@types/react": 18.2.6
     "@types/react-dom": 18.2.4
@@ -1197,6 +1214,19 @@ __metadata:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
   checksum: fc22d9ca12a8b2ac4322db377a2980797843a2776d741fdaccbb642a61c02019a118fafc82dc5f03f148c186e292d539764a8dba1ee0799491d6142bb213b4bc
+  languageName: node
+  linkType: hard
+
+"rc-util@npm:^5.31.1":
+  version: 5.33.0
+  resolution: "rc-util@npm:5.33.0"
+  dependencies:
+    "@babel/runtime": ^7.18.3
+    react-is: ^16.12.0
+  peerDependencies:
+    react: ">=16.9.0"
+    react-dom: ">=16.9.0"
+  checksum: 1a5b4f2ded3ca8a874e3a0797158fb1be60987711145346ba4b9ae8e84fb91462dd030ff06850644d93a46c9d53eaccb978c703a1f3841e55ac2af0117c35745
   languageName: node
   linkType: hard
 
