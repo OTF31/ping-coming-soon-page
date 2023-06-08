@@ -15,8 +15,19 @@ import {
 import IlustrationDashboard from "./assets/illustration-dashboard.png";
 import Logo from "./assets/logo.svg";
 import SocialIcon from "./components/SocialIcon";
+import { Controller, useForm } from "react-hook-form";
+
+type FormData = {
+  email: string;
+};
 
 const Home = () => {
+  const { control, handleSubmit } = useForm<FormData>({
+    defaultValues: { email: "" },
+  });
+
+  const onSubmit = (data: FormData) => console.log(data);
+
   return (
     <>
       <Container size="sm">
@@ -33,21 +44,41 @@ const Home = () => {
         </Text>
         <Space h="sm" />
         <Flex direction={{ base: "column", md: "row" }} gap="sm" mt="xl">
-          <TextInput
-            aria-label="Email address"
-            w="100%"
-            radius="xl"
-            size="xl"
-            placeholder="Your email address..."
-            styles={theme => ({
-              input: {
-                "::placeholder": {
-                  color: theme.colors._paleBlue[6],
-                },
+          <Controller
+            name="email"
+            control={control}
+            rules={{
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Please provide a valid email address",
               },
-            })}
+            }}
+            render={({ field: { value, onChange }, fieldState }) => (
+              <TextInput
+                aria-label="Email address"
+                value={value}
+                onChange={onChange}
+                w="100%"
+                radius="xl"
+                size="xl"
+                placeholder="Your email address..."
+                error={fieldState.error?.message}
+                styles={theme => ({
+                  input: {
+                    "::placeholder": {
+                      color: theme.colors._paleBlue[6],
+                    },
+                  },
+                  error: {
+                    fontStyle: "italic",
+                  },
+                })}
+              />
+            )}
           />
+
           <Button
+            onClick={handleSubmit(onSubmit)}
             radius="xl"
             w={{ base: "100%", md: 250 }}
             size="xl"
